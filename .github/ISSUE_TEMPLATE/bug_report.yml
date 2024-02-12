@@ -1,0 +1,78 @@
+name: 버그 보고
+description: 우리가 개선할 수 있도록 버그 보고서를 생성해주세요.
+title: "[버그] "
+labels: ["bug"]
+assignees: ''
+
+body:
+  - type: markdown
+    attributes:
+      value: "버그를 보고해 주셔서 감사합니다! 문제를 명확하게 이해할 수 있도록 가능한 모든 세부 정보를 제공해주세요."
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: "버그 설명"
+      description: "버그에 대한 명확하고 간결한 설명을 해주세요."
+      placeholder: "버그가 무엇인지 상세하게 설명해주세요."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce-steps
+    attributes:
+      label: "재현 방법"
+      description: "버그를 재현하는 단계:"
+      placeholder: |
+        1. '...'로 이동
+        2. '....'을(를) 클릭
+        3. '....'로 스크롤 다운
+        4. 오류 확인
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: "예상 동작"
+      description: "예상했던 동작에 대한 명확하고 간결한 설명을 해주세요."
+      placeholder: "이 상황에서 어떻게 동작하기를 예상했나요?"
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "스크린샷"
+      description: "문제를 설명하는데 도움이 되는 스크린샷이 있다면 첨부해주세요."
+      placeholder: "해당되는 경우, 스크린샷 URL을 여기에 붙여넣어주세요."
+  - type: input
+    id: desktop-os
+    attributes:
+      label: "데스크탑 OS"
+      description: "사용 중인 데스크탑 운영 체제 (예: Windows 10)"
+      placeholder: "예: iOS"
+    validations:
+      required: false
+  - type: input
+    id: browser
+    attributes:
+      label: "브라우저"
+      description: "사용 중인 브라우저와 버전 (예: Chrome 88)"
+      placeholder: "예: chrome, safari"
+    validations:
+      required: false
+  - type: textarea
+    id: smartphone-info
+    attributes:
+      label: "스마트폰 정보"
+      description: "문제가 발생한 스마트폰의 정보: 기기, OS, 브라우저, 버전"
+      placeholder: |
+        - 기기: [예: iPhone6]
+        - OS: [예: iOS8.1]
+        - 브라우저: [예: stock browser, safari]
+        - 버전: [예: 22]
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: "추가 컨텍스트"
+      description: "문제에 대한 기타 컨텍스트를 여기에 추가해주세요."
+      placeholder: "문제에 대해 추가로 공유하고 싶은 정보가 있다면 여기에 적어주세요."
